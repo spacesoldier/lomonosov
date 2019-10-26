@@ -3,9 +3,11 @@
     // SideNav Scrollbar Initialization
     var sideNavScrollbar = document.querySelector('.custom-scrollbar');
     var ps = new PerfectScrollbar(sideNavScrollbar);
-    // Material Select Initialization
+
+
+    // INITIALIZE ALL LOGIC HERE 
     $(document).ready(function () {
-      $('.mdb-select').material_select();
+
     });
     // Data Picker Initialization
     $('.datepicker').pickadate();
@@ -13,15 +15,7 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    // Minimalist chart
-    $(function () {
-      $('.min-chart#chart-sales').easyPieChart({
-        barColor: "#4caf50",
-        onStep: function (from, to, percent) {
-          $(this.el).find('.percent').text(Math.round(percent));
-        }
-      });
-    });
+    
     // Main chart
     var ctxL = document.getElementById("lineChart").getContext('2d');
     var myLineChart = new Chart(ctxL, {
